@@ -138,18 +138,22 @@ You look around the tiny room and see:
 <tw-passagedata pid="10" name="Guess code" tags="" position="44,307">You try your birthday, your last four digits on your credit card number and on your social security number.... Nothing seems to work...
 
 [[Look around the room for clues-&gt;Look Around]] </tw-passagedata>
-<tw-passagedata pid="11" name="Use code" tags="" position="71,614">&lt;&lt;if $hascode&gt;&gt;
+<tw-passagedata pid="11" name="Use code" tags="" position="70,614">&lt;&lt;if $hascode&gt;&gt;
+	You did it! The code opens the door and you&#39;ve finally [[escaped.-&gt;Win screen]]
+&lt;&lt;else&gt;&gt;
+	I don&#39;t seem to have the code, better look around some more.
+	[[Check the room-&gt;Look Around]] 
 &lt;&lt;/if&gt;&gt;
-	You did it! The code opens the door and you&#39;ve finally [[escaped.-&gt;Win screen]]</tw-passagedata>
+	</tw-passagedata>
 <tw-passagedata pid="12" name="Crawl under bed" tags="" position="661,463">The pipe is covered in dirt and dust and makes you start coughing histerically. 
 
 [[Attempt to wipe the pipe off with your sleeve]]
 </tw-passagedata>
-<tw-passagedata pid="13" name="Attempt to wipe the pipe off with your sleeve" tags="" position="661,613">&lt;&lt;set $hascode = true&gt;&gt;
+<tw-passagedata pid="13" name="Attempt to wipe the pipe off with your sleeve" tags="" position="603,683">&lt;&lt;set $hascode = true&gt;&gt;
 
 As you wipe the pipe down you notice a serious of four numbers on the pipe. Perhaps, these will be useful.
 
-[[Try using the code on the door-&gt;Use code]] </tw-passagedata>
+[[Try using the code on the door-&gt;Door]] </tw-passagedata>
 </tw-storydata>
 </div>
 	<script id="script-sugarcube" type="text/javascript">
