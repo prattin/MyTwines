@@ -1,0 +1,224 @@
+<tw-storydata name="Murder Mystery" startnode="1" creator="Twine" creator-version="2.1.0" ifid="A966681C-5CCF-40F1-931A-E48F8DD1925E" format="SugarCube" format-version="2.12.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
+
+
+
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">/*! <<cyclinglink>> macro for SugarCube 2.x */
+!function(){"use strict";if("undefined"==typeof version||"undefined"==typeof version.title||"SugarCube"!==version.title||"undefined"==typeof version.major||version.major<2)throw new Error("<<cyclinglink>> macro requires SugarCube 2.0 or greater, aborting load");version.extensions.cyclinglinkMacro={major:3,minor:3,revision:2},macros.cyclinglink={handler:function(a,b,c){function toggleText(w){w.classList.remove("cyclingLinkInit"),w.classList.toggle(rl+"Enabled"),w.classList.toggle(rl+"Disabled"),w.style.display="none"===w.style.display?"inline":"none"}var rl="cyclingLink";switch(c[c.length-1]){case"end":var end=!0;c.pop();break;case"out":var out=!0;c.pop()}var v=null;c.length&&"$"===c[0][0]&&(v=c[0].slice(1),c.shift());var h=State.variables;if(!out||!v||""!==h[v]){var l=insertElement(a,"a");l.className="link-internal cyclingLink",l.setAttribute("data-cycle",0);for(var i=0;i<c.length;i++){var on=i===(v?Math.max(c.indexOf(h[v]),0):0),d=insertElement(null,"span",null,"cyclingLinkInit cyclingLink"+(on?"En":"Dis")+"abled");on?(v&&(h[v]=c[i]),l.setAttribute("data-cycle",i)):d.style.display="none",insertText(d,c[i]),on&&end&&i===c.length-1?l.parentNode.replaceChild(d,l):l.appendChild(d)}jQuery(l).ariaClick(function(){var t=this.childNodes,u=this.getAttribute("data-cycle")-0,m=t.length;if(toggleText(t[u]),u+=1,out&&u===m?v&&(h[v]=""):(u%=m,v&&(h[v]=c[u])),(end||out)&&u===m-(end?1:0)){if(!end)return void this.parentNode.removeChild(this);var n=this.removeChild(t[u]);return n.className=rl+"End",n.style.display="inline",void this.parentNode.replaceChild(n,this)}toggleText(t[u]),this.setAttribute("data-cycle",u)})}}}}();
+
+
+
+
+
+
+
+</script><tw-passagedata pid="1" name="How did it come to this?" tags="" position="440,0">How did it come to this? Your wife, laying lifeless on the ground, face first. Blood slowly seeps into her clothes as her white shirt turns red and the puddle around her grows 
+
+//Larger//  
+
+and 
+
+&#x27;&#x27;Larger&#x27;&#x27;.
+
+&lt;img src=&quot;https://i.ytimg.com/vi/bOC2SHSCVRU/maxresdefault.jpg&quot; width=&quot;600&quot;&gt;
+
+ &lt;&lt;link &quot;Knock, Knock Knock...&quot;&gt;&gt;
+	&lt;&lt;audio &quot;Knocking&quot; play volume 1&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+
+[[Continue-&gt;Answer the door]] </tw-passagedata><tw-passagedata pid="2" name="Noose" tags="" position="442,246">&lt;span style=&quot;color:blue&quot;&gt;&quot;Thank you $name1&quot;&lt;/span&gt; Police approach the scene and Detective Straus, the man in charge of this investigation, quickly notes a chair lying on its side and a noose hanging from the banister.
+
+&lt;img src= &quot;http://previews.123rf.com/images/vicnt/vicnt1406/vicnt140600009/29305282-chair-and-noose-in-empty-grunge-room-3d-concept-Stock-Photo.jpg&quot; width=&quot;600&quot;&gt;
+
+The Detective does not seemed overly shocked by the scene as he has seen this suicidal scenario before... &lt;span style=&quot;color:blue&quot;&gt;He asks &quot;What is your wife&#x27;s name&quot;&lt;/span&gt;&quot;
+
+&lt;&lt;textbox &quot;$name&quot; &quot;&quot; autofocus&gt;&gt;
+
+[[Continue-&gt;Wife&#x27;s name]]</tw-passagedata><tw-passagedata pid="3" name="The Bedroom" tags="" position="251,280">The bedroom is tidy. The bed is made nicely with the corners tucked tight and the pillows arranged precisely. There is a cat on top of the bed licking something off its foot. 
+
+The detective walks up to the cat and notices it is licking blood off her paw.
+
+The detective asks you if the cat has been locked in the bedroom all all day, what do you say.
+&lt;&lt;textbox &quot;$catlock&quot; &quot;&quot; autofocus&gt;&gt;
+
+[[Continue-&gt;cat lock]]</tw-passagedata><tw-passagedata pid="4" name="The Bathroom" tags="" position="369,602">&lt;&lt;set $haskey = true&gt;&gt;The detective enters the bathroom. There is nothing much to see in here. The detective sneezes powerfully and runs to blow his nose with some tissue.
+
+&lt;&lt;audio &quot;noseblowing&quot; play loop&gt;&gt;
+
+He throws away the tissue, but notices something shiny in the waste bin. He bends over to see what it is, it&#x27;s a key!
+
+&lt;img src= &quot;http://phoenixlocksmithservice.net/wp-content/uploads/2015/04/key.jpg&quot; width=&quot;600&quot;&gt;
+
+[[Pick up the key-&gt;Wife&#x27;s name]] </tw-passagedata><tw-passagedata pid="5" name="The Kitchen" tags="" position="637,446">The detective decides to search the kitchen first...
+
+As soon as he walks in he smells a strong aroma of cheeses and wonders where it is coming from? &lt;span style=&quot;color:blue&quot;&gt;&quot;Is someone cooking in here?&quot;&lt;/span&gt; he asks you. 
+
+[[Tell him you were not, your wife must&#x27;ve been cooking something]]
+
+</tw-passagedata><tw-passagedata pid="6" name="The Basement" tags="" position="612,188">The detective makes his way down the old wooden staircase to a unfinished, damp basement. The walls were all concrete and a few pieces of old furniture appearing to be in storage. 
+
+There was a &lt;span style=&quot;color:yellow&quot;&gt;light&lt;/span&gt; on in the corner of the room that appeared to be a closet of sorts.
+
+&lt;img src= &quot;https://s-media-cache-ak0.pinimg.com/564x/b8/85/64/b8856451d0529584a86649d26f213544.jpg&quot; width=&quot;600&quot;&gt;
+
+[[Approach the closet]]
+[[Go back upstairs-&gt;Wife&#x27;s name]]</tw-passagedata><tw-passagedata pid="7" name="Answer the door" tags="" position="442,121">You hear a pounding on the door. Hopefully it&#x27;s the police, it feels like it has been hours since you called them. 
+
+&lt;img src= &quot;http://www.zombieworldnews.com/archives/europe/britain/mancpolice.jpg&quot; width=&quot;600&quot;&gt;
+
+
+You open the door.
+
+!!!Shaking, you tell the officers what you came home to after returning from work.
+
+&quot;First off, lets start by getting your name sir...&quot;
+&lt;&lt;textbox &quot;$name1&quot; &quot;&quot; autofocus&gt;&gt;
+
+The police ask you to [[show-&gt;Noose]] them where she is...
+
+</tw-passagedata><tw-passagedata pid="8" name="cat lock" tags="" position="102,7">&lt;&lt;if $catlock == &quot;yes&quot;&gt;&gt;
+	&lt;span style=&quot;color:blue&quot;&gt;&quot;Mmhmm, I see. Now could you explain to me why your cat would have blood on its paw if it was locked in your bedroom all day?&quot;&quot;&lt;/span&gt;&quot;
+[[Act Surprised]]
+[[Deny the Detective&#x27;s theory]]
+[[Praise the cat for its heroism]]
+&lt;&lt;else&gt;&gt;
+	&lt;span style=&quot;color:blue&quot;&gt;It appears as though your cat tried to defend your wife from harm because it has a large gash on her paw.&quot;&lt;/span&gt;&quot;
+[[Act Surprised]]
+[[Deny the Detective&#x27;s theory]]
+[[Praise the cat for its heroism]]
+&lt;&lt;/if&gt;&gt;	</tw-passagedata><tw-passagedata pid="9" name="Act Surprised" tags="" position="95,285">&lt;span style=&quot;color:red&quot;&gt;&quot;I wonder how the cat got out? I carried the cat upstairs this morning and nobody has touched it since.&quot;&lt;/span&gt;
+
+The detective takes a look throughout the room. He searches through all the drawers in the dressers and all through the closet. The only thing the detective found while scavenging throughout the bedroom was a file labeled with your name....
+
+[[Open the file]]</tw-passagedata><tw-passagedata pid="10" name="Deny the Detective&#x27;s theory" tags="" position="20,157">&lt;span style=&quot;color:red&quot;&gt; Impossible, every morning I carry the cat into the bedroom and locked it in there&quot;&lt;/span&gt;&quot;
+
+[[The cop does not seem to believe you-&gt;cat lock]] </tw-passagedata><tw-passagedata pid="11" name="Praise the cat for its heroism" tags="" position="262,38">You are so proud of the cat because it tried to help your wife! You run over to it and pick it up joyously. You begin to kiss it all over its face. The detective notes this is strange behavior for someone whose wife just died...
+
+[[Go back-&gt;cat lock]] </tw-passagedata><tw-passagedata pid="12" name="Wife&#x27;s name" tags="" position="444,371">&lt;&lt;audio &quot;noseblowing&quot; pause&gt;&gt;
+
+&lt;span style=&quot;color:blue&quot;&gt;Okay thank you $name1, we are going to have a look around and see what we can find out about $name&#x27;s death.&quot;&lt;/span&gt;&quot;
+
+Where does Detective Straus choose to search in the house first?
+
+[[The Bathroom]]
+&lt;img src= &quot;http://kingfisher.scene7.com/is/image/Kingfisher/Caldaro_Bathroom_V1?crop=30,184,4956,3269&amp;anchor=2508,1818&amp;$PROMO_940_620$&amp;$PROMO_700_470$&amp;$PROMO_700_470$&quot; width=&quot;600&quot;&gt;
+[[The Kitchen]] 
+&lt;img src= &quot;http://ak.c.ooyala.com/hxNmpyNDE6eytMaV8OQuNQCnVmGYNly6/promo292881448&quot; width=&quot;600&quot;&gt;
+[[The Basement]]
+&lt;img src= &quot;http://www.drymich.com/core/images/basement-finishing/basement-finishing-system/waterproof-first/cluttered-basement-lg.jpg&quot; width=&quot;600&quot;&gt;
+[[The Bedroom]]
+&lt;img src= &quot;http://www.murraymitchell.com/wp-content/uploads/2011/06/clean_modern_interior_bedroom_with_cat_on_bed.jpg&quot; width=&quot;600&quot;&gt;</tw-passagedata><tw-passagedata pid="13" name="Approach the closet" tags="" position="866,173">The detective approaches the closet and attempts to open the door. The door appears to be locked...
+
+[[Use a key]]
+[[Look somewhere else in the house for the key-&gt;Wife&#x27;s name]]</tw-passagedata><tw-passagedata pid="14" name="Lie" tags="" position="792,440">&lt;span style=&quot;color:red&quot;&gt;&quot;What? A room? I never knew this even existed...&quot;&lt;/span&gt; 
+
+&lt;span style=&quot;color:blue&quot;&gt; Sir, this is your house. I find it very unlikely you did not know this existed...Choose your next words wisely&quot; &lt;/span&gt;
+
+&lt;img src= &quot;https://s-media-cache-ak0.pinimg.com/originals/29/45/db/2945db5e6f54b10c0a1e86e86035d52c.jpg&quot; width=&quot;600&quot;&gt;
+
+[[Admit it-&gt;Tell the truth]] </tw-passagedata><tw-passagedata pid="15" name="Tell the truth" tags="" position="919,441">&lt;span style=&quot;color:red&quot;&gt;Sigh...fine this is where our maid sleeps, she is perfectly comfortable down here and I haven&#x27;t heard one complaint from her about it.&lt;/span&gt;
+
+&lt;span style=&quot;color:blue&quot;&gt;$name1, it doesn&#x27;t look like anyone has lived down here for months. There is rotting food on the nightstand and mildew all over the walls. I must speak to her, give me her number.&quot; &lt;/span&gt;
+
+&lt;&lt;textbox &quot;$phone&quot; &quot;&quot; autofocus&gt;&gt;
+
+[[Call]]</tw-passagedata><tw-passagedata pid="16" name="Tell him you were not, your wife must&#x27;ve been cooking something" tags="" position="494,545">Mmhhhmm, it is clear your wife did not know she was going to die today, considering she was baking a casserole. So why would she bother making dinner if she knew she was going to kill herself....
+
+&lt;img src= &quot;http://previews.123rf.com/images/ppart/ppart1107/ppart110700043/9959345-Fresh-baked-homemade-cookies-and-casserole-dish-with-bechamel-sauce-in-oven-Hot-air-allows-the-burni-Stock-Photo.jpg&quot; width=&quot;600&quot;&gt;
+
+[[Hmmmmm...-&gt;Wife&#x27;s name]]</tw-passagedata><tw-passagedata pid="17" name="Use a key" tags="" position="868,299">&lt;&lt;if $haskey&gt;&gt;
+	Perfect fit. The key unlocks the padlock and you try to open the door.The Detective goes into the closet and looks around. He soon realizes it wasn&#x27;t a closet it was a very tiny room. He asks you, &lt;span style=&quot;color:blue&quot;&gt;&quot;Does someone live down here?&quot;&lt;/span&gt;
+[[Lie]]
+[[Tell the truth]]
+&lt;&lt;else&gt;&gt;
+	Yep. The door doesn&#x27;t budge. You seriously need that key dumb dumb.
+	[[Look around again-&gt;Wife&#x27;s name]] 
+&lt;&lt;/if&gt;&gt;
+</tw-passagedata><tw-passagedata pid="18" name="StoryInit" tags="" position="590,0">&lt;&lt;set $haskey = false&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;Mirandarights&quot; &quot;http://prattin.github.io/MyTwines/Sounds/Mirandarights.wav&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;Knocking&quot; &quot;http://prattin.github.io/MyTwines/Sounds/Knocking.wav&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;cellphone&quot; &quot;http://prattin.github.io/MyTwines/Sounds/cellphone.wav&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;dryer&quot; &quot;http://prattin.github.io/MyTwines/Sounds/dryer.wav&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;nervouspiano&quot; &quot;http://prattin.github.io/MyTwines/Sounds/nervouspiano.wav&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;noseblowing&quot; &quot;http://prattin.github.io/MyTwines/Sounds/noseblowing.wav&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Open the file" tags="" position="95,435">Inside the file, the detective finds divorce papers...
+
+While glancing over the papers, the detective notices there is a signature missing...&lt;span style=&quot;color:red&quot;&gt;&#x27;&#x27;Yours&#x27;&#x27;&lt;/span&gt;
+
+[[Get pissed he went through your things.-&gt;Pissed]]
+[[Try to explain.-&gt;Explanation]]
+
+</tw-passagedata><tw-passagedata pid="20" name="I did it" tags="" position="263,741">&lt;&lt;audio &quot;nervouspiano&quot; volume 0 fadein&gt;&gt;
+
+&lt;span style=&quot;color:blue&quot;&gt; &quot;I never said you didn&#x27;t $name1. What I&#x27;m asking is, did she not feel the same way and did that make you angry....&quot;
+
+&quot;Why did your wife file this divorce $name1?&quot; And why have you not signed these papers?&quot; 
+&lt;/span&gt;
+
+You start to get nervous...Beads of sweat drip down your face as the walls slowly close in around you.
+
+&lt;img src= &quot;http://media.gettyimages.com/videos/extreme-close-up-of-bead-of-sweat-running-down-mans-face-video-id996-114?s=640x640&quot; width=&quot;600&quot;&gt;
+
+You manage to get one sentence out...
+&lt;&lt;cyclinglink &quot;$dial1&quot; &quot;You&quot; &quot;Paul&quot; &quot;My Cat&quot; &quot;I&quot;&gt;&gt;
+&lt;&lt;cyclinglink &quot;$dial2&quot; &quot;Killed&quot; &quot;Smelled&quot; &quot;Loved&quot; &quot;Licked&quot;&gt;&gt;
+&lt;&lt;cyclinglink &quot;$dial3&quot; &quot;My brother&quot; &quot;My wife&quot; &quot;My mother&quot; &quot;My father&quot;&gt;&gt;
+
+[[Continue-&gt;Hope it was worth it]] </tw-passagedata><tw-passagedata pid="21" name="Call" tags="" position="920,591">&lt;&lt;audio &quot;cellphone&quot; volume 0 fadein&gt;&gt;
+&lt;&lt;audio &quot;cellphone&quot; volume 0.75 fadeout&gt;&gt;
+
+&lt;&lt;audio &quot;dryer&quot; play loop volume 0.4&gt;&gt;
+
+The detective dials $phone, he hears a faint ringing in the other room. 
+
+He follows the noise through the house as it gets louder and louder. 
+
+The noise leads to the laundry room. The detective opens the dryer to find the cell phone ringing from his call. It&#x27;s her cellphone along with a knife covered in blood. 
+
+
+
+[[Oh my goodness]]</tw-passagedata><tw-passagedata pid="22" name="Oh my goodness" tags="" position="919,741">&lt;&lt;audio &quot;dryer&quot; pause&gt;&gt;
+&lt;&lt;audio &quot;cellphone&quot; pause&gt;&gt;
+&lt;&lt;audio &quot;nervouspiano&quot; volume 0 fadein&gt;&gt;
+
+You admit to the officer that you&#x27;ve been having an affair with the maid for months now. She always was jealous of your wife, but you never thought she would do something like this. The reason her room seemed unused was because she spent most nights in your bed while your wife was away on business. 
+
+Your wife is dead and it&#x27;s all your fault...
+
+[[Continue]]</tw-passagedata><tw-passagedata pid="23" name="Hope it was worth it" tags="" position="91,742">$dial1....$dial2....$dial3
+
+&lt;&lt;if $dial1 == &quot;I&quot; &amp;&amp; $dial2 == &quot;Killed&quot; &amp;&amp; $dial3 == &quot;My wife&quot;&gt;&gt;
+	Wow, there it is...The truth comes out...
+&lt;&lt;else&gt;&gt;
+	Hmm &quot;$dial1 $dial2 $dial3&quot; that doesn&#x27;t make sense you are speaking gibberish...
+		[[Back-&gt;I did it]] 
+&lt;&lt;/if&gt;&gt;
+
+[[Continue-&gt;Prison]]</tw-passagedata><tw-passagedata pid="24" name="Continue" tags="" position="919,891">It wasn&#x27;t hard to find the maid. She was staying at her sister&#x27;a house. Within a few days she was arrested and sent to prison facing life in prison.
+
+&lt;img src= &quot;http://obrag.org/wp-content/uploads/2011/11/OB-Lisa-Dannielli-arrest-11-3-11.jpg&quot; width=&quot;600&quot;&gt;</tw-passagedata><tw-passagedata pid="25" name="Prison" tags="" position="95,867">&lt;&lt;audio &quot;nervouspiano&quot; pause&gt;&gt;
+&lt;&lt;audio &quot;Mirandarights&quot; volume 0 fadein&gt;&gt;
+
+The police place you in prison for murder and you are looking at 35-40 years in prison. All you had to do was sign those papers...
+
+&lt;img src= &quot;http://voice-wilderness.org/wp-content/uploads/2011/10/Man-in-prison.jpg&quot; width=&quot;600&quot;&gt;</tw-passagedata><tw-passagedata pid="26" name="Pissed" tags="" position="0,585">&lt;span style=&quot;color:red&quot;&gt; You went through my things? How dare you! That is a complete invasion of my privacy!&lt;/span&gt; 
+
+&lt;img src= &quot;data:image/jpeg;base64,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&quot; width=&quot;600&quot;&gt;
+
+[[Attempt to explain-&gt;Explanation]] </tw-passagedata><tw-passagedata pid="27" name="Explanation" tags="" position="220,585">&lt;span style=&quot;color:blue&quot;&gt; &quot;$name1, was your marriage on the rocks?&quot; &lt;/span&gt;
+
+&lt;span style=&quot;color:red&quot;&gt; &quot;What? Absolutely not, I love my wife more than anything.&quot; &lt;/span&gt;
+
+&lt;span style=&quot;color:blue&quot;&gt; &quot;Why did your wife want a divorce, and why is she the only one that signed the papers? Were you resisting her request? &lt;/span&gt;
+
+&lt;span style=&quot;color:red&quot;&gt;&quot;No no no, you&#x27;ve got it all wrong. I love my wife more than anything...She may have found a few texts between myself and our maid that she interpreted the wrong way. I never a divorce!&quot;&lt;/span&gt;
+
+[[Continue-&gt;I did it]] </tw-passagedata></tw-storydata>

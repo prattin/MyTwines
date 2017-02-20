@@ -1,0 +1,33 @@
+<tw-storydata name="05_Conditional" startnode="1" creator="Twine" creator-version="2.1.0" ifid="B84B5DD5-3B55-4EAC-8506-82F5818CB6C3" format="SugarCube" format-version="2.12.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
+</script><tw-passagedata pid="1" name="Conditional" tags="" position="474,57">What&#x27;s your score?
+
+&lt;&lt;textbox &quot;$score&quot; &quot;&quot; autofocus&gt;&gt;
+
+[[Continue.-&gt;ScoreCheck]]</tw-passagedata><tw-passagedata pid="2" name="ScoreCheck" tags="" position="474,208">&lt;&lt;if $score &gt;= 90&gt;&gt;
+	Nice, an A.
+&lt;&lt;elseif $score &gt;= 80&gt;&gt;
+	Superb, a B.
+&lt;&lt;elseif $score &gt;= 70&gt;&gt;
+	Splendid, a C.
+&lt;&lt;elseif $score &gt;= 60&gt;&gt;
+	Terrible, you&#x27;re an idiot.
+&lt;&lt;elseif $score &gt;=50&gt;&gt;
+	You should quit.
+&lt;&lt;else&gt;&gt;
+	Awful.
+&lt;&lt;/if&gt;&gt;	
+
+&lt;&lt;set $isRaining = true&gt;&gt;
+&lt;&lt;if $isRaining&gt;&gt;
+	Bring an umbrella!
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;set $name = &quot;Lassie&quot;&gt;&gt;
+&lt;&lt;if $name == &quot;Lassie&quot;&gt;&gt;
+	What, Timmy&#x27;s fallen in the well???
+&lt;&lt;/if&gt;&gt;	</tw-passagedata></tw-storydata>

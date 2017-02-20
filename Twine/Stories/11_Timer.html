@@ -1,0 +1,51 @@
+<tw-storydata name="11_Timer" startnode="1" creator="Twine" creator-version="2.1.0" ifid="741C4F04-260F-4FC3-BFC4-133FEE7E6775" format="SugarCube" format-version="2.12.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+</script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="428,209">&lt;&lt;set $seconds = 10&gt;&gt;\
+Bomb defusal duty again. You wonder why you can&#x27;t focus, even with a flashing timer in your face.
+
+Time remaining: &lt;span id=&quot;countdown&quot;&gt;$seconds&lt;/span&gt; seconds remaining
+
+@@#tick-tock;@@
+[[Cut the red wire-&gt;Boom]]
+[[Cut the blue wire-&gt;Boom]]
+&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;timed 3s&gt;&gt;
+		[[Take off the VR headset-&gt;Continue]]
+	&lt;&lt;/timed&gt;&gt;	
+&lt;&lt;/nobr&gt;&gt;	
+
+&lt;&lt;silently&gt;&gt;
+	&lt;&lt;repeat 1s&gt;&gt;
+		&lt;&lt;set $seconds = $seconds - 1&gt;&gt;
+		&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;$seconds&lt;&lt;/replace&gt;&gt;
+		&lt;&lt;if $seconds &gt;= 0&gt;&gt;
+			&lt;&lt;replace &quot;#countdown&quot;&gt;&gt;$seconds&lt;&lt;/replace&gt;&gt;
+			&lt;&lt;append &quot;#tick-tock&quot;&gt;&gt;Tick...&lt;&lt;/append&gt;&gt;
+		&lt;&lt;else&gt;&gt;
+		&#x60;	&lt;&lt;goto &quot;Boom&quot;&gt;&gt;
+		&lt;&lt;/if&gt;&gt;
+	&lt;&lt;/repeat&gt;&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Boom" tags="" position="292,280">Boom. Your VR body explodes into a million pieces.</tw-passagedata><tw-passagedata pid="3" name="Continue" tags="" position="556,436">You wait.\
+&lt;&lt;timed 1s t8n&gt;&gt;
+	And wait.\
+&lt;&lt;next 1s t8n&gt;&gt;
+	And waaaait.\
+&lt;&lt;next 1.5s t8n&gt;&gt;
+	Enough of this. You call a technician over to disconnect your haptics\
+&lt;&lt;next 1.5s t8n&gt;&gt;
+	...\
+&lt;&lt;next 1.5s&gt;&gt;
+	&lt;&lt;goto &quot;Technician&quot;&gt;&gt;
+&lt;&lt;/timed&gt;&gt;	</tw-passagedata><tw-passagedata pid="4" name="Technician" tags="" position="366,410">A technician appears.
+
+He asks you what&#x27;s wrong. You might want to take a second to breath before responding.
+
+&lt;&lt;timed 2s t8n&gt;&gt;
+	In...
+&lt;&lt;next 2s t8n&gt;&gt;
+	Out...
+&lt;&lt;/timed&gt;&gt;
+
+[[Get me out of this damn thing.-&gt;Rude]]
+[[Asshole, let me out-&gt;Rude]]
+&lt;&lt;timed 6s t8n&gt;&gt;[[Could you please take the haptics off sir]]&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Rude" tags="" position="291,560">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="6" name="Could you please take the haptics off sir" tags="" position="441,560">Double-click this passage to edit it.</tw-passagedata></tw-storydata>

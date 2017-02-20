@@ -1,0 +1,457 @@
+<tw-storydata name="Final Twine Project" startnode="3" creator="Twine" creator-version="2.1.0" ifid="EFDAA347-2C44-41E1-B6C6-41AA0F5FBA34" format="SugarCube" format-version="2.12.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://prattin.github.io/MyTwines/fonts/stylesheet.css');
+
+/* Remove the sidebar, so we don't have to deal with recoloring it */
+#ui-bar {
+  display: none;
+}
+
+/* Space between the passage text and edges of the screen */
+#story {
+	margin: 40px;
+}
+#passages {
+  	font-size: 25px;
+  max-width: 600px;
+    /* Text box styling */
+  border: 3px solid white;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 50px;
+  border-radius: 5px;
+}
+body.room-one #passages  {
+  	font-size: 30px;
+  max-width: 800px;
+    /* Text box styling */
+  border: 0px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0px;
+  border-radius: 0px;
+}
+
+body.email {
+  color: white;
+  font-family:'Oswald', sans-serif;
+  font-size: 10px;
+}
+
+body {
+ /* Background needs the body >= 100% the height of the page */	
+  min-height: 100vh;
+}
+
+body.single-background {
+  background: url("http://wallpapercave.com/wp/IEMGruA.jpg") center center / cover no-repeat;
+  }
+
+body.computer-screen {
+  background: url("https://prattin.github.io/MyTwines/Images/macbackground.jpg") center center / cover no-repeat;
+}
+
+body.phone {
+  background: url("https://prattin.github.io/MyTwines/Images/phone.gif") center center / cover no-repeat;
+}
+
+body.room-one {
+  background-color: hsla(0, 0%, 81%, 1);
+}
+
+body.blood {
+  background: url("https://prattin.github.io/MyTwines/Images/blood.jpg") center center / cover no-repeat;
+}
+
+body.mansion {
+	background: url("http://prattin.github.io/MyTwines/Images/mansion.jpg") center center / cover no-repeat;
+}
+
+body.sawevil {
+  background: url("http://prattin.github.io/MyTwines/Images/sawevil.gif") center center / cover no-repeat;
+}
+
+body.light {
+  background: url("http://prattin.github.io/MyTwines/Images/creepyroom.jpg") center center / cover no-repeat;
+}
+
+body.graveyard {
+  background: url("http://prattin.github.io/MyTwines/Images/image.jpg") center center / cover no-repeat;
+}
+
+body.stomp {
+  background-color: black;
+  color: White;
+  font-family:'Caflisch Script Pro, cursive';
+  font-size: 25px;
+}
+
+/* Typed.js text (and cursor) styling. */
+.typed, .typed-cursor {
+	font-family: 'ransomregular';
+	color: red;
+}
+
+/* Typed.js animated cursor styling. */
+.typed-cursor {
+	opacity: 1;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+@keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@-webkit-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@-moz-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">/*! typed.js integration module for SugarCube */
+!function(){"use strict";function getInlineOptions(classNames){var match,options={},typedRe=/^typed(?:-(\w+))+\b$/,parseRe=/-(speed|delay)(\d+)\b/g;if("typed"!==classNames){classNames=classNames.toLowerCase().split(/\s+/);for(var i=0;i<classNames.length;i++)if(typedRe.test(classNames[i])){for(;null!==(match=parseRe.exec(classNames[i]));)switch(match[1]){case"speed":options.typeSpeed=+match[2];break;case"delay":options.startDelay=+match[2]}break}}return options}function typedCallbackFactory(el,callback){return function(){var $outer=jQuery(el),$inner=jQuery('<div class="typedjs-text-wrapper" style="display:block;position:absolute;left:0;top:0;"><span class="typed"></span></div>'),$source=$outer.children('[class|="typed"]'),options=jQuery.extend({typeSpeed:40,startDelay:400},getInlineOptions($source.attr("class")),{strings:[$source.html()]});"function"==typeof callback&&(options.callback=callback),$outer.append($inner),$inner.children().typed(options)}}postrender.typedSetupHandler=function(content){jQuery('[class|="typed"]',content).addClass("typed").css("visibility","hidden").wrap('<div class="typedjs-outer-wrapper" style="display:block;position:relative;"></div>')},postdisplay.typedAnimationHandler=function(){for(var $elements=jQuery("#passages .typedjs-outer-wrapper"),callback=null,i=$elements.length-1;i>=0;--i)callback=typedCallbackFactory($elements[i],callback);"function"==typeof callback&&callback()}}();
+/*! Typed.js | (c) 2014 Matt Boldt | MIT License */
+!function(t){"use strict";var s=function(s,e){this.el=t(s),this.options=t.extend({},t.fn.typed.defaults,e),this.isInput=this.el.is("input"),this.attr=this.options.attr,this.showCursor=this.isInput?!1:this.options.showCursor,this.elContent=this.attr?this.el.attr(this.attr):this.el.text(),this.contentType=this.options.contentType,this.typeSpeed=this.options.typeSpeed,this.startDelay=this.options.startDelay,this.backSpeed=this.options.backSpeed,this.backDelay=this.options.backDelay,this.stringsElement=this.options.stringsElement,this.strings=this.options.strings,this.strPos=0,this.arrayPos=0,this.stopNum=0,this.loop=this.options.loop,this.loopCount=this.options.loopCount,this.curLoop=0,this.stop=!1,this.cursorChar=this.options.cursorChar,this.shuffle=this.options.shuffle,this.sequence=[],this.build()};s.prototype={constructor:s,init:function(){var t=this;t.timeout=setTimeout(function(){for(var s=0;s<t.strings.length;++s)t.sequence[s]=s;t.shuffle&&(t.sequence=t.shuffleArray(t.sequence)),t.typewrite(t.strings[t.sequence[t.arrayPos]],t.strPos)},t.startDelay)},build:function(){var s=this;if(this.showCursor===!0&&(this.cursor=t('<span class="typed-cursor">'+this.cursorChar+"</span>"),this.el.after(this.cursor)),this.stringsElement){s.strings=[],this.stringsElement.hide();var e=this.stringsElement.find("p");t.each(e,function(e,i){s.strings.push(t(i).html())})}this.init()},typewrite:function(t,s){if(this.stop!==!0){var e=Math.round(70*Math.random())+this.typeSpeed,i=this;i.timeout=setTimeout(function(){var e=0,r=t.substr(s);if("^"===r.charAt(0)){var o=1;/^\^\d+/.test(r)&&(r=/\d+/.exec(r)[0],o+=r.length,e=parseInt(r)),t=t.substring(0,s)+t.substring(s+o)}if("html"===i.contentType){var n=t.substr(s).charAt(0);if("<"===n||"&"===n){var a="",h="";for(h="<"===n?">":";";t.substr(s).charAt(0)!==h;)a+=t.substr(s).charAt(0),s++;s++,a+=h}}i.timeout=setTimeout(function(){if(s===t.length){if(i.options.onStringTyped(i.arrayPos),i.arrayPos===i.strings.length-1&&(i.options.callback(),i.curLoop++,i.loop===!1||i.curLoop===i.loopCount))return;i.timeout=setTimeout(function(){i.backspace(t,s)},i.backDelay)}else{0===s&&i.options.preStringTyped(i.arrayPos);var e=t.substr(0,s+1);i.attr?i.el.attr(i.attr,e):i.isInput?i.el.val(e):"html"===i.contentType?i.el.html(e):i.el.text(e),s++,i.typewrite(t,s)}},e)},e)}},backspace:function(t,s){if(this.stop!==!0){var e=Math.round(70*Math.random())+this.backSpeed,i=this;i.timeout=setTimeout(function(){if("html"===i.contentType&&">"===t.substr(s).charAt(0)){for(var e="";"<"!==t.substr(s).charAt(0);)e-=t.substr(s).charAt(0),s--;s--,e+="<"}var r=t.substr(0,s);i.attr?i.el.attr(i.attr,r):i.isInput?i.el.val(r):"html"===i.contentType?i.el.html(r):i.el.text(r),s>i.stopNum?(s--,i.backspace(t,s)):s<=i.stopNum&&(i.arrayPos++,i.arrayPos===i.strings.length?(i.arrayPos=0,i.shuffle&&(i.sequence=i.shuffleArray(i.sequence)),i.init()):i.typewrite(i.strings[i.sequence[i.arrayPos]],s))},e)}},shuffleArray:function(t){var s,e,i=t.length;if(i)for(;--i;)e=Math.floor(Math.random()*(i+1)),s=t[e],t[e]=t[i],t[i]=s;return t},reset:function(){var t=this;clearInterval(t.timeout);var s=this.el.attr("id");this.el.after('<span id="'+s+'"/>'),this.el.remove(),"undefined"!=typeof this.cursor&&this.cursor.remove(),t.options.resetCallback()}},t.fn.typed=function(e){return this.each(function(){var i=t(this),r=i.data("typed"),o="object"==typeof e&&e;r||i.data("typed",r=new s(this,o)),"string"==typeof e&&r[e]()})},t.fn.typed.defaults={strings:["These are the default values...","You know what you should do?","Use your own!","Have a great day!"],stringsElement:null,typeSpeed:0,startDelay:0,backSpeed:0,shuffle:!1,backDelay:500,loop:!1,loopCount:!1,showCursor:!0,cursorChar:"|",attr:null,contentType:"html",callback:function(){},preStringTyped:function(){},onStringTyped:function(){},resetCallback:function(){}}}(window.jQuery);
+
+!function(a,b){"function"==typeof define&&define.amd?define(["jquery"],b):b(a.jQuery)}(window,function(a){var b,c,d,e,f,g,h,i,j,k,l;if(c=!!document.createElement("canvas").getContext,b=function(){var a=document.createElement("div");a.innerHTML='<v:shape id="vml_flag1" adj="1" />';var b=a.firstChild;return b.style.behavior="url(#default#VML)",!b||"object"==typeof b.adj}(),!c&&!b)return void(a.fn.maphilight=function(){return this});if(c){i=function(a){return Math.max(0,Math.min(parseInt(a,16),255))},j=function(a,b){return"rgba("+i(a.substr(0,2))+","+i(a.substr(2,2))+","+i(a.substr(4,2))+","+b+")"},d=function(b){var c=a('<canvas style="width:'+a(b).width()+"px;height:"+a(b).height()+'px;"></canvas>').get(0);return c.getContext("2d").clearRect(0,0,a(b).width(),a(b).height()),c};var m=function(a,b,c,d,e){if(d=d||0,e=e||0,a.beginPath(),"rect"==b)a.rect(c[0]+d,c[1]+e,c[2]-c[0],c[3]-c[1]);else if("poly"==b){a.moveTo(c[0]+d,c[1]+e);for(var f=2;f<c.length;f+=2)a.lineTo(c[f]+d,c[f+1]+e)}else"circ"==b&&a.arc(c[0]+d,c[1]+e,c[2],0,2*Math.PI,!1);a.closePath()};e=function(b,c,d,e,f){var h=b.getContext("2d");if(e.shadow){h.save(),"inside"==e.shadowPosition&&(m(h,c,d),h.clip());var i=100*b.width,k=100*b.height;m(h,c,d,i,k),h.shadowOffsetX=e.shadowX-i,h.shadowOffsetY=e.shadowY-k,h.shadowBlur=e.shadowRadius,h.shadowColor=j(e.shadowColor,e.shadowOpacity);var l=e.shadowFrom;l||(l="outside"==e.shadowPosition?"fill":"stroke"),"stroke"==l?(h.strokeStyle="rgba(0,0,0,1)",h.stroke()):"fill"==l&&(h.fillStyle="rgba(0,0,0,1)",h.fill()),h.restore(),"outside"==e.shadowPosition&&(h.save(),m(h,c,d),h.globalCompositeOperation="destination-out",h.fillStyle="rgba(0,0,0,1);",h.fill(),h.restore())}h.save(),m(h,c,d),e.fill&&(h.fillStyle=j(e.fillColor,e.fillOpacity),h.fill()),e.stroke&&(h.strokeStyle=j(e.strokeColor,e.strokeOpacity),h.lineWidth=e.strokeWidth,h.stroke()),h.restore(),e.fade&&a(b).css("opacity",0).animate({opacity:1},100)},f=function(a){a.getContext("2d").clearRect(0,0,a.width,a.height)}}else d=function(b){return a('<var style="zoom:1;overflow:hidden;display:block;width:'+b.width+"px;height:"+b.height+'px;"></var>').get(0)},e=function(b,c,d,e,f){var g,h,i,j;for(var k in d)d[k]=parseInt(d[k],10);g='<v:fill color="#'+e.fillColor+'" opacity="'+(e.fill?e.fillOpacity:0)+'" />',h=e.stroke?'strokeweight="'+e.strokeWidth+'" stroked="t" strokecolor="#'+e.strokeColor+'"':'stroked="f"',i='<v:stroke opacity="'+e.strokeOpacity+'"/>',"rect"==c?j=a('<v:rect name="'+f+'" filled="t" '+h+' style="zoom:1;margin:0;padding:0;display:block;position:absolute;left:'+d[0]+"px;top:"+d[1]+"px;width:"+(d[2]-d[0])+"px;height:"+(d[3]-d[1])+'px;"></v:rect>'):"poly"==c?j=a('<v:shape name="'+f+'" filled="t" '+h+' coordorigin="0,0" coordsize="'+b.width+","+b.height+'" path="m '+d[0]+","+d[1]+" l "+d.join(",")+' x e" style="zoom:1;margin:0;padding:0;display:block;position:absolute;top:0px;left:0px;width:'+b.width+"px;height:"+b.height+'px;"></v:shape>'):"circ"==c&&(j=a('<v:oval name="'+f+'" filled="t" '+h+' style="zoom:1;margin:0;padding:0;display:block;position:absolute;left:'+(d[0]-d[2])+"px;top:"+(d[1]-d[2])+"px;width:"+2*d[2]+"px;height:"+2*d[2]+'px;"></v:oval>')),j.get(0).innerHTML=g+i,a(b).append(j)},f=function(b){var c=a("<div>"+b.innerHTML+"</div>");c.children("[name=highlighted]").remove(),b.innerHTML=c.html()};g=function(a){var b,c=a.getAttribute("coords").split(",");for(b=0;b<c.length;b++)c[b]=parseFloat(c[b]);return[a.getAttribute("shape").toLowerCase().substr(0,4),c]},l=function(b,c){var d=a(b);return a.extend({},c,!!a.metadata&&d.metadata(),d.data("maphilight"))},k=function(a){return!!a.complete&&("undefined"==typeof a.naturalWidth||0!==a.naturalWidth)},h={position:"absolute",left:0,top:0,padding:0,border:0};var n=!1;a.fn.maphilight=function(i){return i=a.extend({},a.fn.maphilight.defaults,i),c||n||(a(window).ready(function(){document.namespaces.add("v","urn:schemas-microsoft-com:vml");var b=document.createStyleSheet(),c=["shape","rect","oval","circ","fill","stroke","imagedata","group","textbox"];a.each(c,function(){b.addRule("v\\:"+this,"behavior: url(#default#VML); antialias:true")})}),n=!0),this.each(function(){var j,m,n,o,p,q,s;if(j=a(this),!k(this))return window.setTimeout(function(){j.maphilight(i)},200);if(n=a.extend({},i,!!a.metadata&&j.metadata(),j.data("maphilight")),s=j.get(0).getAttribute("usemap"),s&&(o=a('map[name="'+s.substr(1)+'"]'),j.is('img,input[type="image"]')&&s&&o.length>0)){if(j.hasClass("maphilighted")){var t=j.parent();j.insertBefore(t),t.remove(),a(o).unbind(".maphilight")}m=a("<div></div>").css({display:"block",backgroundImage:'url("'+this.src+'")',backgroundSize:"contain",position:"relative",padding:0,width:this.width,height:this.height}),n.wrapClass&&(n.wrapClass===!0?m.addClass(a(this).attr("class")):m.addClass(n.wrapClass)),j.before(m).css("opacity",0).css(h).remove(),b&&j.css("filter","Alpha(opacity=0)"),m.append(j),p=d(this),a(p).css(h),p.height=this.height,p.width=this.width,a(o).bind("alwaysOn.maphilight",function(){q&&f(q),c||a(p).empty(),a(o).find("area[coords]").each(function(){var b,f;f=l(this,n),f.alwaysOn&&(!q&&c&&(q=d(j[0]),a(q).css(h),q.width=j[0].width,q.height=j[0].height,j.before(q)),f.fade=f.alwaysOnFade,b=g(this),c?e(q,b[0],b[1],f,""):e(p,b[0],b[1],f,""))})}).trigger("alwaysOn.maphilight").bind("mouseover.maphilight, focus.maphilight",function(b){var d,f,h=b.target;if(f=l(h,n),!f.neverOn&&!f.alwaysOn){if(d=g(h),e(p,d[0],d[1],f,"highlighted"),f.groupBy){var i;i=/^[a-zA-Z][\-a-zA-Z]+$/.test(f.groupBy)?o.find("area["+f.groupBy+'="'+a(h).attr(f.groupBy)+'"]'):o.find(f.groupBy);var j=h;i.each(function(){if(this!=j){var a=l(this,n);if(!a.neverOn&&!a.alwaysOn){var b=g(this);e(p,b[0],b[1],a,"highlighted")}}})}c||a(p).append("<v:rect></v:rect>")}}).bind("mouseout.maphilight, blur.maphilight",function(a){f(p)}),j.before(p),j.addClass("maphilighted")}})},a.fn.maphilight.defaults={fill:!0,fillColor:"000000",fillOpacity:.2,stroke:!0,strokeColor:"ff0000",strokeOpacity:1,strokeWidth:1,fade:!0,alwaysOn:!1,neverOn:!1,groupBy:!1,wrapClass:!0,shadow:!1,shadowX:0,shadowY:0,shadowRadius:6,shadowColor:"000000",shadowOpacity:.8,shadowPosition:"outside",shadowFrom:!1}});
+
+</script><tw-passagedata pid="1" name="Beginning" tags="email computer-screen text-box" position="603,254">&lt;&lt;nobr&gt;&gt;
+A short video appears. Someone appears to be writing you a message...
+@@.typed-speed20;
+Hello, $name how nice we finally get to meet. I love what you&#x27;ve done with your new place, very tasteful.@@
+
+&lt;img src=&quot;https://prattin.github.io/MyTwines/Images/saw.gif&quot; width=&quot;500&quot; height=&quot;375&quot;&gt;
+&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;timed 14s&gt;&gt;
+	&lt;&lt;goto &quot;Response&quot;&gt;&gt;
+&lt;&lt;/timed&gt;&gt;	</tw-passagedata><tw-passagedata pid="2" name="Response" tags="phone no-text-box text-box" position="603,372">&lt;&lt;timed 10s&gt;&gt; &lt;&lt;audio &quot;dialing&quot; play volume 1&gt;&gt; &lt;&lt;/timed&gt;&gt;\
+&lt;span style=&quot;color:blue&quot;&gt;&quot;What? Who the hell is this? Jimmy you&#x27;ve taken your pranks too far this time.&quot; &lt;/span&gt; &lt;&lt;timed 5s&gt;&gt;
+&lt;span style=&quot;color:white&quot;&gt;Jimmy walks past your cubicle sipping his coffee. &lt;/span&gt;
+&lt;span style=&quot;color:green&quot;&gt;&quot;Morning $name, TGIF am I right?&quot;&lt;/span&gt;\
+&lt;&lt;/timed&gt;&gt; &lt;&lt;timed 8s&gt;&gt;
+&lt;span style=&quot;color:blue&quot;&gt;&quot;Okay, this seriously isn&#x27;t funny anymore...&quot;&lt;/span&gt;
+You immediately reach for your office phone and dial your wife&#x27;s number.Your wife should be getting home from work any minute now, you have to warn her.&lt;&lt;audio &quot;dialing&quot; stop&gt;&gt; &lt;&lt;/timed&gt;&gt; &lt;&lt;timed 10s&gt;&gt;
+&lt;&lt;/timed&gt;&gt; &lt;&lt;timed 8s&gt;&gt;[[Dial (847)657-9900-&gt;Answers phone]]&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Start" tags="single-background first-link text-box" position="607,11">&lt;&lt;audio &quot;evilbackground&quot; play volume .6&gt;&gt;Life in your cubicle is long and boring...
+
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;timed 4s t8n&gt;&gt;
+Day...
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 5s t8n&gt;&gt;
+After... 
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 6s t8n&gt;&gt;
+Day...
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;/nobr&gt;&gt; &lt;&lt;timed 7s t8n&gt;&gt;
+
+You sit at your computer hoping it will explode and end your miserable life.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 8s t8n&gt;&gt;Last night you came home to your wife having sex with your neighbor and you spent the night in your tiny little Prius.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 9.5s t8n&gt;&gt;Ugh, this day needs to end.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 11s t8n&gt;&gt;[[Smack your face on the computer-&gt;Computer]]&lt;&lt;/timed&gt;&gt;
+
+
+</tw-passagedata><tw-passagedata pid="4" name="Computer" tags="computer-screen text-box" position="604,131">&lt;&lt;audio &quot;ding&quot; play volume 1&gt;&gt;\
+Ding!
+
+You computer makes a weird noise. &#x27;&#x27;Shit, I think you broke it. The screen goes blank. A message appears on the screen...&#x27;&#x27;
+
+It requires you to enter your name before you can access the message.
+&lt;&lt;textbox &quot;$name&quot; &quot;&quot; autofocus&gt;&gt;
+
+[[Press Enter-&gt;Beginning]]</tw-passagedata><tw-passagedata pid="5" name="StoryInit" tags="" position="444,12">&lt;&lt;cacheaudio &quot;ding&quot; &quot;http://prattin.github.io/MyTwines/Sounds/ding.wav&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;dialing&quot; &quot;http://prattin.github.io/MyTwines/Sounds/dialing.wav&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;heavybreathing&quot; &quot;http://prattin.github.io/MyTwines/Sounds/heavybreathing.wav&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;rifle&quot; &quot;http://prattin.github.io/MyTwines/Sounds/rifle.wav&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;evilbackground&quot; &quot;http://prattin.github.io/MyTwines/Sounds/evilbackground.wav&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;evilwomenmonster&quot; &quot;http://prattin.github.io/MyTwines/Sounds/evilwomenmonster.wav&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;evilbaby&quot; &quot;http://prattin.github.io/MyTwines/Sounds/evilbaby.mp3&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;musicboxpirates&quot; &quot;http://prattin.github.io/MyTwines/Sounds/musicboxpirates.wav&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;femalescream&quot; &quot;http://prattin.github.io/MyTwines/Sounds/femalescream.wav&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;clownlaugh&quot; &quot;http://prattin.github.io/MyTwines/Sounds/clownlaugh.wav&quot;&gt;&gt;
+
+
+</tw-passagedata><tw-passagedata pid="6" name="Answers phone" tags="computer-screen text-box" position="599,503">&lt;&lt;audio &quot;evilbackground&quot; fadeoverto 1s 0.2&gt;&gt;
+&lt;&lt;timed 3s&gt;&gt;&lt;&lt;audio &quot;heavybreathing&quot; play volume 1&gt;&gt; Somebody answers the phone. It&#x27;s definitely not your wife. &lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 3s&gt;&gt;
+&lt;span style=&quot;color:Blue&quot;&gt;&quot;Hello? Deborah? What have you done with my wife?&quot;&lt;/span&gt;
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 6s&gt;&gt;A heavy breathing begins on the other end of the line and a message appears on your screen...&lt;&lt;/timed&gt;&gt;
+@@.typed-speed20-delay10000; $name, I would like to formally invite you to my mansion atop the hill outside of town. If you call the authorities your wife will be enjoying one of my many homemade torture machines.
+I would hurry your wife doesn&#x27;t have much time left...&lt;&lt;timed 26s&gt;&gt;&lt;&lt;audio &quot;:playing&quot; stop&gt;&gt; &lt;&lt;audio &quot;evilbackground&quot; play volume 1&gt;&gt; &lt;&lt;/timed&gt;&gt;
+@@ 
+&lt;&lt;timed 18s&gt;&gt;[[Get in your nasty ass Prius-&gt;Arrival]]&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="First room" tags="room-one" position="599,787">&lt;&lt;audio &quot;evilbackground&quot; play volume .6&gt;&gt;
+&lt;!-- Image Map Generated by http://www.image-map.net/ --&gt;
+&lt;img src=&quot;http://prattin.github.io/MyTwines/Images/doors.jpg&quot;
+usemap=&quot;#image-map&quot;&gt;
+
+&lt;map name=&quot;image-map&quot;&gt;
+    &lt;area
+	class=&quot;green-area&quot;
+	data-passage=&quot;Door 1&quot;
+	alt=&quot;Door 1&quot; 
+	title=&quot;Door 1&quot; 
+	coords=&quot;64,298,0,510&quot; 
+	shape=&quot;rect&quot;&gt;
+	
+    &lt;area
+	class=&quot;green-area&quot;
+	data-passage=&quot;Door 1&quot;
+	alt=&quot;Door 2&quot; 
+	title=&quot;Door 2&quot; 
+	coords=&quot;139,302,230,511&quot; 
+	shape=&quot;rect&quot;&gt;
+	
+    &lt;area
+	class=&quot;green-area&quot;
+	data-passage=&quot;Door 1&quot;
+	alt=&quot;Door 3&quot; 
+	title=&quot;Door 3&quot; 
+	coords=&quot;303,303,394,510&quot; 
+	shape=&quot;rect&quot;&gt;
+	
+    &lt;area
+	class=&quot;green-area&quot;
+	data-passage=&quot;Door 1&quot;
+	alt=&quot;Door 4&quot; 
+	title=&quot;Door 4&quot; 
+	coords=&quot;466,302,557,508&quot; 
+	shape=&quot;rect&quot;&gt;
+	
+    &lt;area
+	class=&quot;green-area&quot;
+	data-passage=&quot;Door 1&quot;
+	alt=&quot;Door 5&quot; 
+	title=&quot;Door 5&quot; 
+	coords=&quot;629,301,721,509&quot; 
+	shape=&quot;rect&quot;&gt;
+	
+    &lt;area
+	class=&quot;green-area&quot;
+	data-passage=&quot;Door 1&quot;
+	alt=&quot;Door 6&quot; 
+	title=&quot;Door 6&quot; 
+	coords=&quot;793,303,884,509&quot; 
+	shape=&quot;rect&quot;&gt;
+	
+    &lt;area
+	class=&quot;green-area&quot;
+	data-passage=&quot;Door 1&quot;
+	alt=&quot;Door 7&quot; 
+	title=&quot;Door 7&quot; 
+	coords=&quot;956,302,1023,509&quot; 
+	shape=&quot;rect&quot;&gt;
+	
+    &lt;area
+	class=&quot;red-area&quot;
+	data-passage=&quot;Hidden Door&quot;
+	alt=&quot;Hidden Door&quot; 
+	title=&quot;Hidden Door&quot; 
+	coords=&quot;306,522,394,719&quot; 
+	shape=&quot;rect&quot;&gt;
+	&lt;/script&gt;
+&lt;/map&gt;</tw-passagedata><tw-passagedata pid="8" name="PassageDone" tags="" position="323,20">&lt;!--
+This is a special passage in SugarCube. It runs after *EACH* passage is displayed to the page. It allows us to run any dynamic JavaScript - like the JS for highlighting a map. The code must go inside a script macro.
+--&gt;
+
+&lt;&lt;script&gt;&gt;
+
+// If you have multiple maps in your story and you want to apply
+// different styling to each:
+//	1: Give each map (or maps) that should share a style a class
+// 	2: Use the below code, but replace &quot;show-all-map&quot; with the 
+//     class name
+$(&quot;img.green-area&quot;).data(&quot;maphilight&quot;, {
+  fillColor: &#x27;ff0000&#x27;, 
+  stroke: false,
+  alwaysOn: true
+});
+
+// If you want to override any of those options for an area:
+//	1: Give the area (or areas) a class
+// 	2: Use the below code, but replace &quot;green-area&quot; with the 
+//     class name
+$(&quot;area.red-area&quot;).data(&quot;maphilight&quot;, {
+  fillcolor: &#x27;black&#x27;,
+});
+
+$(&quot;area.no-area&quot;).data(&quot;maphilight&quot;, {
+ fill: false,
+ stroke: false,
+});
+
+// Apply maphilight to all images that have a usemap attribute
+$(&quot;img[usemap]&quot;).maphilight({
+  fill: true,             	// Fill the area?
+  fillColor: &#x27;ff0000&#x27;,    	// HEX format without the starting &quot;#&quot;
+  fillOpacity: 0.5,       	// Opacity of the filled area
+  stroke: true,           	// Outline the area?
+  strokeColor: &#x27;ff00ff&#x27;,
+  strokeOpacity: 1,
+  strokeWidth: 3,			// Outline width
+  fade: true,             	// Animate when hovered with a fade?
+  alwaysOn: false,        	// Always show the areas?
+  neverOn: false,
+  groupBy: false,
+  wrapClass: true,
+  shadow: false,
+  shadowX: 0,
+  shadowY: 0,
+  shadowRadius: 6,
+  shadowColor: &#x27;000000&#x27;,
+  shadowOpacity: 0.8,
+  shadowPosition: &#x27;outside&#x27;,
+  shadowFrom: false
+});
+
+
+
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="Door 1" tags="blood" position="423,620">&lt;&lt;timed 1s&gt;&gt; &lt;&lt;audio &quot;evilbackground&quot; fadeoverto 1s 0.2&gt;&gt; You slowly step towards the door that you decide to walk through...You see a shrouded figure in the dark...&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 5s t8n&gt;&gt;Is it your wife?&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 7s t8n&gt;&gt;No! It&#x27;s an assassin!&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 8s t8n&gt;&gt;The assassin looks you right in the eye and puts 8 bullets in your chest.&lt;&lt;audio &quot;rifle&quot; play volume 0.7&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 10s t8n&gt;&gt;[[Try Again-&gt;First room]]&lt;&lt;/timed&gt;&gt;
+&lt;&lt;audio &quot;rifle&quot; stop&gt;&gt;
+
+&lt;&lt;timed 6s t8n&gt;&gt;&lt;img src=&quot;https://prattin.github.io/MyTwines/Images/michael-scott.gif&quot; width=&quot;600&quot; height=&quot;375&quot;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Arrival" tags="mansion" position="600,637">You drive all the way to the outside of town and pull up to the eerie old mansion. You race through the front door expecting to find your wife, but to your surprise you enter a room with 7 more doors. 
+&lt;&lt;timed 6s t8n&gt;&gt;You have to make a choice, which door is your wife behind?&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 8s t8n&gt;&gt;[[Enter-&gt;First room]]&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Hidden Door" tags="sawevil room-one" position="589,912">You choose to use the hidden door in the floor, which opens up to a staircase that leads to a lower floor. A TV monitor is at the bottom of the stairs that quickly displays a video.
+@@.typed-speed20; Well, well, well... It looks like your wife will live for at least one more room. Don&#x27;t get too confident, one small slip up and your wife will pay the price.
+@@
+&lt;&lt;timed 8s t8n&gt;&gt;[[Move on to the very dark room 2, you should find a source of light when you enter-&gt;Room 2 Dark]]&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Room 2 Dark" tags="red-area" position="586,1038">&lt;!-- Image Map Generated by http://www.image-map.net/ --&gt;
+&lt;img src=&quot;http://prattin.github.io/MyTwines/Images/creepyroom copy.jpg&quot;
+usemap=&quot;#image-map&quot;&gt;
+
+&lt;map name=&quot;image-map&quot;&gt;
+    &lt;area 
+	class=&quot;no-area&quot;
+	data-passage=&quot;Lights on&quot;
+	alt=&quot;Light Switch&quot; 
+	title=&quot;Light Switch&quot;  
+	coords=&quot;1094,624,1121,681&quot; shape=&quot;rect&quot;&gt;
+&lt;/map&gt;</tw-passagedata><tw-passagedata pid="13" name="Light Switch" tags="" position="589,1396">&lt;!-- Image Map Generated by http://www.image-map.net/ --&gt;
+&lt;img src=&quot;http://prattin.github.io/MyTwines/Images/creepyroomwithclown.jpg&quot; usemap=&quot;#image-map&quot;&gt;
+
+&lt;map name=&quot;image-map&quot;&gt;
+    &lt;area 
+	area=&quot;green-area&quot;
+	data-passage=&quot;Dead&quot;
+	alt=&quot;cotton button&quot; 
+	title=&quot;cotton button&quot; 
+	coords=&quot;463,609,18&quot; 
+	shape=&quot;circle&quot;&gt;
+    
+	&lt;area 
+	area=&quot;green-area&quot;
+	data-passage=&quot;Defeat Clown&quot;
+	alt=&quot;table leg&quot; 
+	title=&quot;table leg&quot; 
+	coords=&quot;999,758,1018,920&quot; 
+	shape=&quot;rect&quot;&gt;
+    
+	&lt;area 
+	area=&quot;green-area&quot;
+	data-passage=&quot;Dead&quot;
+	alt=&quot;hook&quot; 
+	title=&quot;hook&quot; 					coords=&quot;923,586,916,608,899,610,894,597,896,585,904,571,899,598&quot;   shape=&quot;poly&quot;&gt;
+    
+	&lt;area 
+	area=&quot;green-area&quot;
+	data-passage=&quot;Dead&quot;
+	alt=&quot;wood plank&quot; 
+	title=&quot;wood plank&quot;
+	coords=&quot;663,1054,858,1037&quot; 
+	shape=&quot;rect&quot;&gt;
+   
+   &lt;area 
+   area=&quot;green-area&quot;
+   data-passage=&quot;Dead&quot;
+   alt=&quot;jug&quot; 
+   title=&quot;jug&quot; coords=&quot;1440,1064,1440,1039,1445,1008,1545,1017,1550,1041,1567,1044,1571,1058,1543,1064,1521,1076,1525,1075&quot; 
+   shape=&quot;poly&quot;&gt;
+&lt;/map&gt;</tw-passagedata><tw-passagedata pid="14" name="Dead" tags="" position="730,1397">You move too slowly and the clown reaches you before you can grab something to defend yourself with. The clown catches you and your wife dies...&lt;&lt;timed 1.5s&gt;&gt;&lt;&lt;audio &quot;femalescream&quot; play volume 0.8&gt;&gt;&lt;&lt;/timed&gt;&gt;
+[[Try again-&gt;Light Switch]]</tw-passagedata><tw-passagedata pid="15" name="Lights on" tags="light" position="586,1160">&lt;&lt;timed 1s t8n&gt;&gt; &lt;span style=&quot;color:green&quot;&gt;Phew, thank goodness you found the light switch, who knows what&#x27;s down here. &lt;/span&gt; &lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 5s t8n&gt;&gt; &lt;&lt;audio &quot;evilwomenmonster&quot; play volume 1&gt;&gt;The walls are covered in blood and the stench is unbearable. You can hear the screams of people in agony in the distance.&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 7s t8n&gt;&gt; &lt;span style=&quot;color:green&quot;&gt;Flies surround you and you start to swat them all away. &lt;&lt;audio &quot;evilwomenmonster&quot; stop&gt;&gt; &lt;/span&gt; &lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 9s t8n&gt;&gt;[[Stomp on those damn flies-&gt;Stomp]]&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Stomp" tags="room-one stomp" position="591,1275">&lt;&lt;timed 1s t8n&gt;&gt; As you swat at them you simultaneously begin to stomp on the ones you&#x27;ve knocked to the ground. &lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 3.5s t8n&gt;&gt;As you are stomping. You notice someone matching your stomps....&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 3.5s t8n &gt;&gt;&lt;img src=&quot;http://prattin.github.io/MyTwines/Images/stomp.gif&quot; width=&quot;600&quot; height=&quot;450&quot;&gt; &lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 4.5s t8n&gt;&gt;They get louder and louder as if someone is coming closer and closer...&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 9s&gt;&gt; &lt;&lt;audio &quot;clownlaugh&quot; play volume 1&gt;&gt; You hear a sick laugh, which startles you and makes you look up. Your eyes meet a gruesome looking creature standing 10 feet away from you.
+You have to act fast, find something in the room to get rid of this terrible monster.&lt;&lt;/timed&gt;&gt; &lt;&lt;timed 14s&gt;&gt; &lt;&lt;audio &quot;clownlaugh&quot; stop&gt;&gt; &lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 12s t8n&gt;&gt;[[Frantically check the room for weapons-&gt;Light Switch]]&lt;&lt;/timed&gt;&gt;
+</tw-passagedata><tw-passagedata pid="17" name="Defeat Clown" tags="" position="472,1399">You quickly look for anything you can use to defend yourself against the giant clown creature. You head right for the table. It&#x27;s rather weak so  you are able to break the leg off easily. 
+
+The clown lunges toward you and grabs you by the hair on your head. You have to act fast and you plunge the splintered wood through his heart. 
+
+&lt;&lt;timed 5s&gt;&gt;&lt;&lt;audio &quot;clownlaugh&quot; play volume 1&gt;&gt;The clown falls to the ground with a thud laughing the whole way down.&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 7s&gt;&gt;[[Search his body]]&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Search his body" tags="" position="589,1536">As the clown&#x27;s body hits the floor you hear a faint noise begin to resonate from his pocket...&lt;&lt;timed 1s&gt;&gt; &lt;&lt;audio &quot;musicboxpirates&quot; play loop volume 1&gt;&gt; &lt;&lt;audio &quot;evilbackground&quot; fadeoverto 1s 0.4&gt;&gt; &lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 5s&gt;&gt;It was an old music box...
+Why would this disgusting monster have a music box in his pocket?
+You reach for the box and and open it up to find a ballerina inside spinning on its toes.&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 2s&gt;&gt; &lt;img src=&quot;http://prattin.github.io/MyTwines/Images/musicbox.gif&quot; width=&quot;500&quot; height=&quot;350&quot;&gt; &lt;&lt;/timed&gt;&gt;
+
+You look inside the music box and you find a key. This key must lead to your wife! &lt;&lt;timed 16s&gt;&gt; &lt;&lt;audio &quot;:playing&quot; stop&gt;&gt; &lt;&lt;audio &quot;evilbackground&quot; play volume 1&gt;&gt; &lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 10s&gt;&gt;[[Race to the locked door in the corner]]&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Race to the locked door in the corner" tags="" position="589,1686">You try the key on the door.
+
+&lt;&lt;timed 2s&gt;&gt;It&#x27;s a perfect fit! You barge in hoping to find your wife...
+You then find yourself in an office with a live camera feed of the whole house. The room appears to be empty.&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 4s&gt;&gt;But wait...&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 5s&gt;&gt;The chair turns [[around...]]&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 5s&gt;&gt; &lt;img src=&quot;http://prattin.github.io/MyTwines/Images/chairspin.gif&quot;&gt; &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="around..." tags="" position="588,1836">It&#x27;s your wife, she&#x27;s not tied up at all... She stares at you with a grin on her face. 
+&lt;&lt;timed 5s&gt;&gt;&lt;span style=&quot;color:red&quot;&gt; &quot;Hello, $name, surprised? You shouldn&#x27;t be, after you refused to sign the divorce papers I needed a new plan. I decided that I would have to take a different approach to getting rid of you...&quot;&lt;/span&gt; &lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 7s&gt;&gt;&lt;span style=&quot;color:red&quot;&gt;&quot;I lured you right into my trap and you fell for it without questions&quot;&lt;/span&gt; &lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 8s&gt;&gt; **The door shuts and locks behind you**&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 9.5s&gt;&gt; &lt;span style=&quot;color:blue&quot;&gt; &quot;Deborah, what the hell... What are you gonna do to me? I came here to save you, doesn&#x27;t that mean anything to you? I&#x27;ll sign the damn papers if it means you won&#x27;t kill me...&quot;&lt;/span&gt; &lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 11s&gt;&gt; &lt;span style=&quot;color:red&quot;&gt; &quot;It&#x27;s too late for that $name, you had your chance.&quot;&lt;/span&gt; &lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 13s&gt;&gt;**You wife pulls out a large machete from under her desk and she lunges at you. You manage to avoid her joust, but she continues to pursue you...**
+
+You get trapped in the corner of the room and your wife stands right in front of you.&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 15s&gt;&gt;&lt;span style=&quot;color:red&quot;&gt; &quot;I&#x27;m sorry I have to do this $name,&lt;/span&gt; [[you killed my true love.]]&lt;&lt;/timed&gt;&gt; 
+
+&lt;&lt;timed 12s&gt;&gt; &lt;img src=&quot;http://prattin.github.io/MyTwines/Images/machete.gif&quot; width=&quot;500&quot; height=&quot;350&quot;&gt; &lt;&lt;/timed&gt;&gt;
+
+</tw-passagedata><tw-passagedata pid="21" name="you killed my true love." tags="" position="588,1968">&lt;span style=&quot;color:blue&quot;&gt;&quot;What? I never killed your true love, who are you talking about.&quot; &lt;/span&gt;
+
+&lt;span style=&quot;color:red&quot;&gt; &quot;$name, its Paul Robinson, it has always been him...&quot; &lt;/span&gt;
+
+&lt;&lt;timed 5s&gt;&gt; &lt;span style=&quot;color:blue&quot;&gt;&quot;Our neighbor?!? You said that was a mistake and it would never happen again&quot;&lt;/span&gt; &lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 8s&gt;&gt; &lt;span style=&quot;color:red&quot;&gt; &quot;He was the clown creature you stabbed visciously in the hall!&quot; &lt;/span&gt; &lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 8s&gt;&gt; &lt;span style=&quot;color:blue&quot;&gt;&quot;Oh well that was his own damn fault, what kind of freak dresses like that?&quot;&lt;/span&gt; &lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 10s&gt;&gt; **That set you wife off and with one long swing of her sword, your head fell to the floor** &lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 10s&gt;&gt; &lt;img src=&quot;http://prattin.github.io/MyTwines/Images/decapitation.gif&quot; width=&quot;500&quot; height=&quot;350&quot;&gt; &lt;&lt;/timed&gt;&gt;
+
+[[You are dead]]</tw-passagedata><tw-passagedata pid="22" name="You are dead" tags="graveyard" position="589,2136">I&#x27;m sorry it had to end this way. You should&#x27;ve had better taste in women...</tw-passagedata></tw-storydata>

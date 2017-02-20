@@ -1,0 +1,39 @@
+<tw-storydata name="16_RPG_battledemo" startnode="1" creator="Twine" creator-version="2.1.0" ifid="E000D330-1C14-44D5-B37C-E8CEBCFB890C" format="SugarCube" format-version="2.12.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+</script><tw-passagedata pid="1" name="Random demo" tags="" position="472,345">&lt;&lt;set $pie = either(&quot;blueberry&quot;, &quot;cherry&quot;, &quot;pecan&quot;)&gt;&gt;\
+&lt;&lt;set $attackPower = random (1, 10)&gt;&gt;\
+&lt;&lt;set $scoremultiplier = randomFloat (1, 2)&gt;&gt;\
+\
+You ate a $pie pie.
+You have $attackPower strength.
+Your multiplier is : $scoremultiplier.
+
+[[Start battle demo-&gt;Start Battle]]</tw-passagedata><tw-passagedata pid="2" name="Start Battle" tags="" position="472,495">&lt;&lt;set $skeletonHealth = random(8, 10)&gt;&gt;\
+&lt;&lt;set $yourHealth = 10&gt;&gt;\
+\
+You encounter an angry looking skeleton. What do you do?
+
+Your health: &#x27;&#x27;&lt;&lt;print $yourHealth&gt;&gt;&#x27;&#x27;
+Skeleton&#x27;s health: &#x27;&#x27;&lt;&lt;print $skeletonHealth&gt;&gt;&#x27;&#x27;
+
+[[Slap-&gt;Battle turn][$action = &quot;slap&quot;]]
+[[Punch-&gt;Battle turn][$action = &quot;punch&quot;]]</tw-passagedata><tw-passagedata pid="3" name="Battle turn" tags="" position="472,645">&lt;&lt;silently&gt;&gt;
+	&lt;&lt;set $damageTaken = random(2, 3)&gt;&gt;
+	&lt;&lt;if $action == &quot;slap&quot;&gt;&gt;
+			&lt;&lt;set $damageGiven = random(2, 3)&gt;&gt;
+	&lt;&lt;else&gt;&gt;
+			&lt;&lt;set $damageGiven = random(0, 7)&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
+	&lt;&lt;set $yourHealth = $yourHealth - $damageTaken&gt;&gt;
+	&lt;&lt;set $skeletonHealth = $skeletonHealth - $damageGiven&gt;&gt;
+&lt;&lt;/silently&gt;&gt;\
+\
+You //&lt;&lt;print $action&gt;&gt;// the skeleton. You do &#x27;&#x27;&lt;&lt;print $damageGiven&gt;&gt;&#x27;&#x27; damage.
+
+You skelton flails wildly. Bones smash into your face and you take &#x27;&#x27;&lt;&lt;print $damageTaken&gt;&gt;&#x27;&#x27;.
+
+Your health: &#x27;&#x27;&lt;&lt;print $yourHealth&gt;&gt;&#x27;&#x27;
+Skeleton&#x27;s health: &#x27;&#x27;&lt;&lt;print $skeletonHealth&gt;&gt;&#x27;&#x27;
+
+[[Slap-&gt;Battle turn][$action = &quot;slap&quot;]]
+[[Punch-&gt;Battle turn][$action = &quot;punch&quot;]]</tw-passagedata></tw-storydata>

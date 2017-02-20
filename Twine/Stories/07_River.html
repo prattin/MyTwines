@@ -1,0 +1,39 @@
+<tw-storydata name="07_River" startnode="1" creator="Twine" creator-version="2.1.0" ifid="A06F3458-D56B-4332-BDAF-D10A283A65D6" format="SugarCube" format-version="2.12.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">/*! <<cyclinglink>> macro for SugarCube 2.x */
+!function(){"use strict";if("undefined"==typeof version||"undefined"==typeof version.title||"SugarCube"!==version.title||"undefined"==typeof version.major||version.major<2)throw new Error("<<cyclinglink>> macro requires SugarCube 2.0 or greater, aborting load");version.extensions.cyclinglinkMacro={major:3,minor:3,revision:2},macros.cyclinglink={handler:function(a,b,c){function toggleText(w){w.classList.remove("cyclingLinkInit"),w.classList.toggle(rl+"Enabled"),w.classList.toggle(rl+"Disabled"),w.style.display="none"===w.style.display?"inline":"none"}var rl="cyclingLink";switch(c[c.length-1]){case"end":var end=!0;c.pop();break;case"out":var out=!0;c.pop()}var v=null;c.length&&"$"===c[0][0]&&(v=c[0].slice(1),c.shift());var h=State.variables;if(!out||!v||""!==h[v]){var l=insertElement(a,"a");l.className="link-internal cyclingLink",l.setAttribute("data-cycle",0);for(var i=0;i<c.length;i++){var on=i===(v?Math.max(c.indexOf(h[v]),0):0),d=insertElement(null,"span",null,"cyclingLinkInit cyclingLink"+(on?"En":"Dis")+"abled");on?(v&&(h[v]=c[i]),l.setAttribute("data-cycle",i)):d.style.display="none",insertText(d,c[i]),on&&end&&i===c.length-1?l.parentNode.replaceChild(d,l):l.appendChild(d)}jQuery(l).ariaClick(function(){var t=this.childNodes,u=this.getAttribute("data-cycle")-0,m=t.length;if(toggleText(t[u]),u+=1,out&&u===m?v&&(h[v]=""):(u%=m,v&&(h[v]=c[u])),(end||out)&&u===m-(end?1:0)){if(!end)return void this.parentNode.removeChild(this);var n=this.removeChild(t[u]);return n.className=rl+"End",n.style.display="inline",void this.parentNode.replaceChild(n,this)}toggleText(t[u]),this.setAttribute("data-cycle",u)})}}}}();
+
+</script><tw-passagedata pid="1" name="Cycling" tags="" position="455,50">You are standing in front of a &lt;&lt;cyclinglink &quot;Cramped&quot; &quot;Grungy&quot; &quot;Dilapidated&quot;&gt;&gt; building.
+
+You see a suitcase lock in front of you. What is the combination?
+
+&lt;&lt;cyclinglink &quot;$dial1&quot; &quot;two&quot; &quot;three&quot; &quot;four&quot; &quot;five&quot;&gt;&gt;
+&lt;&lt;cyclinglink &quot;$dial2&quot; &quot;mute&quot; &quot;blind&quot; &quot;deaf&quot; &quot;paralyzed&quot;&gt;&gt;
+&lt;&lt;cyclinglink &quot;$dial3&quot; &quot;mice&quot; &quot;dogs&quot; &quot;goats&quot; &quot;rats&quot;&gt;&gt;
+
+[[Open it!-&gt;Open]]</tw-passagedata><tw-passagedata pid="2" name="Open" tags="" position="455,200">$dial1 ... $dial2 ... $dial3 ...
+
+&lt;&lt;if $dial1 == &quot;three&quot; &amp;&amp; $dial2 == &quot;blind&quot; &amp;&amp; $dial3 == &quot;mice&quot;&gt;&gt;
+	You opened the lock. Unfortunate
+ly, the suitcase just contains a smaller, locked suitcase.
+	[[Look at the smaller suitcase-&gt;Smaller Suitcase]]
+&lt;&lt;else&gt;&gt;
+	Hmm &quot;$dial1 $dial2 $dial3&quot; doesn&#x27;t quite sound right. Nothing happened.
+		[[Back-&gt;Cycling]] 
+&lt;&lt;/if&gt;&gt;
+
+</tw-passagedata><tw-passagedata pid="3" name="Smaller Suitcase" tags="" position="455,350">Hmm.. a code appears on the smaller suitcase...
+
+&lt;&lt;cyclinglink &quot;$dial4&quot; &quot;Hot&quot; &quot;Cold&quot; &quot;Freezing&quot; &quot;Boiling&quot;&gt;&gt;
+&lt;&lt;cyclinglink &quot;$dial5&quot; &quot;Straight&quot; &quot;Cross&quot; &quot;Perpendicular&quot; &quot;Parallel&quot;&gt;&gt;
+&lt;&lt;cyclinglink &quot;$dial6&quot; &quot;Bagels&quot; &quot;Breads&quot; &quot;Rolls&quot; &quot;Buns&quot;&gt;&gt;
+
+[[Continue]]</tw-passagedata><tw-passagedata pid="4" name="Continue" tags="" position="455,500">$dial4 ... $dial5 ... $dial6 ...
+
+&lt;&lt;if $dial4 == &quot;Hot&quot; &amp;&amp; $dial5 == &quot;Cross&quot; &amp;&amp; $dial6 == &quot;Buns&quot;&gt;&gt;
+	You opened the lock. Well done!
+	[[Continue-&gt;Winner]]
+&lt;&lt;else&gt;&gt;
+	Hmm &quot;$dial4 $dial5 $dial6&quot; doesn&#x27;t quite sound right. Nothing happened.
+		[[Back-&gt;Smaller Suitcase]] 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Winner" tags="" position="455,650">Yayy you did it!</tw-passagedata></tw-storydata>

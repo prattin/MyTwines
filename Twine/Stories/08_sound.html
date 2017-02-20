@@ -1,0 +1,41 @@
+<tw-storydata name="08_sound" startnode="2" creator="Twine" creator-version="2.1.0" ifid="C1D65576-AF51-4454-B63C-A95B650887DF" format="SugarCube" format-version="2.12.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+</script><tw-passagedata pid="1" name="StoryInit" tags="" position="508,37">&lt;&lt;cacheaudio &quot;Train&quot; &quot;http://mikewesthad.github.io/Class-TwineMedia/Sounds/AmbientSounds/Train.wav&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;Music&quot; &quot;http://mikewesthad.github.io/Class-TwineMedia/Sounds/Music/Melt.ogg&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;Monkey&quot; &quot;http://mikewesthad.github.io/Class-TwineMedia/Sounds/SoundEffects/Monkey.ogg&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;Coin&quot; &quot;http://mikewesthad.github.io/Class-TwineMedia/Sounds/SoundEffects/Coin.wav&quot;&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;Kitten&quot; &quot;http://mikewesthad.github.io/Class-TwineMedia/Sounds/SoundEffects/Kitten.wav&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="2" name="Start" tags="" position="469,167">You sit next to a stranger on the train. You hear the faint sounds of his music coming from his earbuds.
+
+&lt;&lt;audio &quot;Train&quot; play loop volume 1&gt;&gt;
+&lt;&lt;audio &quot;Music&quot; play loop volume 0.5&gt;&gt;
+
+[[Imagine everyone around you is monkeys-&gt;Monkey]]
+[[Block out all the sound-&gt;Block]]
+[[Focus on the music-&gt;Music]]
+[[Play with your phone-&gt;Phone]]</tw-passagedata><tw-passagedata pid="3" name="Monkey" tags="" position="469,316">&lt;&lt;audio &quot;Monkey&quot; play goto &quot;Start&quot;&gt;&gt;
+[[Back-&gt;Start]]
+</tw-passagedata><tw-passagedata pid="4" name="Block" tags="" position="263,297">Silence.
+&lt;&lt;audio &quot;:playing&quot; sotp&gt;&gt;
+[[Back-&gt;Start]]</tw-passagedata><tw-passagedata pid="5" name="Music" tags="" position="713,224">The sounds of the train...
+&lt;&lt;audio &quot;Train&quot; fadeoverto 0.1s 0.3&gt;&gt;
+&lt;&lt;audio &quot;Music&quot; fadeoverto 0.1s 1&gt;&gt;
+[[Back-&gt;Start]]</tw-passagedata><tw-passagedata pid="6" name="Phone" tags="" position="664,349">What do you want to do&gt;
+
+&lt;&lt;link &quot;Play a game&quot;&gt;&gt;
+	&lt;&lt;audio &quot;Coin&quot; play volume 1&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+
+&lt;&lt;link &quot;Watch Kitten on youtube&quot;&gt;&gt;
+	&lt;&lt;audio &quot;Kitten&quot; play volume 1&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+
+&lt;&lt;link &quot;Stop touching your phone&quot;&gt;&gt;
+	&lt;&lt;audio &quot;:playing&quot; stop&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata></tw-storydata>

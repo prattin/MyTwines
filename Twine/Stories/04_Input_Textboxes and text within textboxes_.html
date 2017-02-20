@@ -1,0 +1,22 @@
+<tw-storydata name="04_Input(Textboxes and text within textboxes)" startnode="1" creator="Twine" creator-version="2.1.0" ifid="2ADDA789-7149-4F27-A7F4-DE7641BA9B58" format="SugarCube" format-version="2.12.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
+
+</script><tw-passagedata pid="1" name="Input" tags="" position="455,78">Oh hello there... //Er, I know this// Okay. I knew this once. What&#x27;s your name?
+
+&lt;&lt;textbox &quot;$name&quot; &quot;&quot; autofocus&gt;&gt;
+
+[[Continue-&gt;Greetings]]</tw-passagedata><tw-passagedata pid="2" name="Greetings" tags="" position="455,229">Oh right, hello there $name! It&#x27;s nice to see you again, $name. If I keep saying your name, then there&#x27;s no way I&#x27;ll forget it, right $name?
+
+__&lt;&lt;print $name&gt;&gt;__
+&#x27;&#x27;&lt;&lt;print $name&gt;&gt;&#x27;&#x27;
+//&lt;&lt;print $name&gt;&gt;//
+
+[[Continue-&gt;Age]]</tw-passagedata><tw-passagedata pid="3" name="Age" tags="" position="455,379">Didn&#x27;t you go to high school with my sister? Was that you or someone else, I can&#x27;t remember. How old are you again? 
+&lt;&lt;textbox &quot;$age&quot; &quot;&quot; autofocus&gt;&gt;
+
+[[Continue-All together]]</tw-passagedata><tw-passagedata pid="4" name="Continue-All together" tags="" position="455,529">Wow $name you&#x27;re $age already! It wasn&#x27;t you that went to school with my sister, my mistake.</tw-passagedata></tw-storydata>

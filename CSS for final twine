@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://prattin.github.io/MyTwines/fonts/stylesheet.css');
+
+/* Remove the sidebar, so we don't have to deal with recoloring it */
+#ui-bar {
+  display: none;
+}
+
+/* Space between the passage text and edges of the screen */
+#story {
+	margin: 40px;
+}
+#passages {
+  	font-size: 25px;
+  max-width: 600px;
+    /* Text box styling */
+  border: 3px solid white;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 50px;
+  border-radius: 5px;
+}
+body.room-one #passages  {
+  	font-size: 0px;
+  max-width: 0px;
+    /* Text box styling */
+  border: 0px solid white;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0px;
+  border-radius: 0px;
+}
+
+body.email {
+  color: white;
+  font-family:'Oswald', sans-serif;
+  font-size: 10px;
+}
+
+body {
+ /* Background needs the body >= 100% the height of the page */	
+  min-height: 100vh;
+}
+
+body.single-background {
+  background: url("http://wallpapercave.com/wp/IEMGruA.jpg") center center / cover no-repeat;
+  }
+
+body.computer-screen {
+  background: url("https://prattin.github.io/MyTwines/Images/macbackground.jpg") center center / cover no-repeat;
+}
+
+body.phone {
+  background: url("https://prattin.github.io/MyTwines/Images/phone.gif") center center / cover no-repeat;
+}
+
+body.room-one {
+  background-color: hsla(0, 0%, 81%, 1);
+}
+
+/* Typed.js text (and cursor) styling. */
+.typed, .typed-cursor {
+	font-family: 'ransomregular';
+	color: red;
+}
+
+/* Typed.js animated cursor styling. */
+.typed-cursor {
+	opacity: 1;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+@keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@-webkit-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@-moz-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
